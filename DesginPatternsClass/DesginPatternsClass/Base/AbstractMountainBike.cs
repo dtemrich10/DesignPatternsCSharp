@@ -8,13 +8,19 @@ namespace DesginPatternsClass
 {
     public abstract class AbstractMountainBike : AbstractBike
     {
-        public AbstractMountainBike() : this(BikeColor.Black)
+        public AbstractMountainBike(IWheel wheel) : this(wheel, BikeColor.Black)
         {
 
         }
-        public AbstractMountainBike(BikeColor color) : base(color)
+        public AbstractMountainBike(IWheel wheel, BikeColor color) : base(wheel, color)
         {
 
         }
+
+        public override decimal Price
+        {
+            get { return 740.00m; }
+        }
+
     }
 }
